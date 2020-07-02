@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flux - RSS</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -20,7 +21,8 @@
   <!-- ===============================================================/header============================================================================ -->
   <!-- ===============================================================navbar============================================================================ -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -80,7 +82,8 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">×</span></button>
           <h4 class="modal-title">faite votre choix !</h4>
         </div>
         <div class="modal-body">
@@ -92,48 +95,50 @@
               <option value="black">Noir</option>
               <option value="blue">Bleu</option>
               <option value="red">Rouge</option>
-              <p>looooool</p>
+              <p>lodddd</p>
             </select>
           </div>
-          <!-- checkbox -->
-          <div class="[ form-group ]">
-            <label for="color">Nombre d’articles affichés :</label>
-            <select class="form-control" name="color">
-              <option selected disabled>--</option>
-              <option value="byDefault">Par défaut</option>
-              <option value="black">Noir</option>
-              <option value="blue">Bleu</option>
-              <option value="red">Rouge</option>
-            </select>
-          </div>
-          <!-- checkbox -->
-          <div class="[ form-group ]">
-            <label for="color">Couleur du site :</label>
-            <select class="form-control" name="color">
-              <option selected disabled>--</option>
-              <option value="byDefault">Par défaut</option>
-              <option value="black">Noir</option>
-              <option value="blue">Bleu</option>
-              <option value="red">Rouge</option>
-            </select>
-          </div>
+        </div><!-- checkbox -->
+        <div class="[ form-group ]">
+          <label for="color">Nombre d’articles affichés :</label>
+          <select class="form-control" name="color">
+            <option selected disabled>--</option>
+            <option value="byDefault">Par défaut</option>
+            <option value="black">Noir</option>
+            <option value="blue">Bleu</option>
+            <option value="red">Rouge</option>
+          </select>
         </div>
-        <!-- checkbox -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+      </div><!-- checkbox -->
+      <div class="[ form-group ]">
+        <label for="color">Couleur du site :</label>
+        <select class="form-control" name="color">
+          <option selected disabled>--</option>
+          <option value="byDefault">Par défaut</option>
+          <option value="black">Noir</option>
+          <option value="blue">Bleu</option>
+          <option value="red">Rouge</option>
+        </select>
+      </div>
+    </div><!-- checkbox -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
   <!-- ===============================================================/modal============================================================================ -->
 </body>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
 </body>
 
