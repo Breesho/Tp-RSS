@@ -95,7 +95,7 @@
               <option value="black">Noir</option>
               <option value="blue">Bleu</option>
               <option value="red">Rouge</option>
-              <p>loddddaaaaaaa</p>
+              <p>loddddaaaaaaasdfsdgsdgvdsgsdgsdgv</p>
             </select>
           </div>
         </div><!-- checkbox -->
