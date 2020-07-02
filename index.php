@@ -92,6 +92,7 @@
               <option value="black">Noir</option>
               <option value="blue">Bleu</option>
               <option value="red">Rouge</option>
+              <p>looooool</p>
             </select>
           </div>
           <!-- checkbox -->
