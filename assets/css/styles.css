@@ -1,11 +1,11 @@
 .jumbotron {
     margin-bottom: 0px;
-    background-color: red;
+    background-color: rgb(117, 140, 241);
 }
 #actuality {
     margin-top: 50px;
 }
 
-.ulDoteremove{
+.ulDotRemove{
     list-style-type: none;
 }

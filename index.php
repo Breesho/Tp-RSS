@@ -41,7 +41,7 @@
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
         <li class="nav-item">
-          <a class="nav-link " data-toggle="modal" data-target="#myModal" href="#">paramètres</a>
+          <a class="nav-link" data-toggle="modal" data-target="#modalSetting" href="#">Paramètres</a>
         </li>
       </ul>
     </div>
@@ -80,23 +80,21 @@
 
   <!-- ===============================================================/actualité============================================================================ -->
   <!-- ===============================================================modal============================================================================ -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">×</span></button>
-          <h4 class="modal-title">Changer les paramètres !</h4>
+          <h4 class="col-12 modal-title text-center bg-primary text-white rounded">⇩ Choisissez vos paramètres ⇩</h4>
         </div>
         <div class="modal-body">
           <div class="[ form-group ]">
             <label for="color">Couleur du site :</label>
             <select class="form-control" name="color">
               <option selected disabled>--</option>
-              <option value="byDefault">Par défaut</option>
-              <option value="black">Noir</option>
-              <option value="blue">Bleu</option>
-              <option value="red">Rouge</option>
+              <option value="colorButton">Par défaut (blanc)</option>
+              <option value="colorButton">Noir</option>
+              <option value="colorButton">Bleu</option>
+              <option value="colorButton">Rouge</option>
             </select>
           </div>
         </div><!-- checkbox -->
@@ -114,7 +112,8 @@
         <!-- checkbox -->
         <div class="modal-body">
           <div class="[ form-group ]">
-            <ul class="ulDoteremove">
+            <label for="checkCat">Choix des sujets :</label>
+            <ul id="checkCat" class="ulDotRemove">
             <li><input type="checkbox" id="choice1" name="subscribe" value="choix1" checked>
             <label for="subscribeNews">actualites/politique-droits</label></li>
             <li><input type="checkbox" id="choice2" name="subscribe" value="choix2" checked>
