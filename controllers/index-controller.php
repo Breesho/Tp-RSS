@@ -9,29 +9,31 @@ $RssJeux = simplexml_load_file($LienJeux);
 
 
 $CardPolitique = $RssPolitique->channel->item[1];
-// $CardPhoto = $RssPhoto->channel->item[1];
-// $CardJeux = $RssJeux->channel->item[1];
+$CardPhoto = $RssPhoto->channel->item[1];
+$CardJeux = $RssJeux->channel->item[1];
 
-$title = $CardPolitique->title;
-$desc = $CardPolitique->description;
-$link = $CardPolitique->link;
-$date = $CardPolitique->pubDate;
-$img =$CardPolitique->enclosure;
+$title1 = $CardPolitique->title;
+$desc1 = $CardPolitique->description;
+$link1 = $CardPolitique->link;
+$date1 = $CardPolitique->pubDate;
+$img1 =$CardPolitique->enclosure;
 
-$title = $CardPhoto->title;
-$desc = $CardPhoto->description;
-$link = $CardPhoto->link;
-$date = $CardPhoto->pubDate;
-$img = $CardPhoto->enclosure;
+$title2 = $CardPhoto->title;
+$desc2 = $CardPhoto->description;
+$link2 = $CardPhoto->link;
+$date2 = $CardPhoto->pubDate;
+$img2 = $CardPhoto->enclosure;
 
-$title = $CardJeux->title;
-$desc = $CardJeux->description;
-$link = $CardJeux->link;
-$date = $CardJeux->pubDate;
-$img = $CardJeux->enclosure;
+$title3 = $CardJeux->title;
+$desc3 = $CardJeux->description;
+$link3 = $CardJeux->link;
+$date3 = $CardJeux->pubDate;
+$img3 = $CardJeux->enclosure;
 
 
-var_dump($CardPolitique);
-var_dump($CardPhoto);
-var_dump($CardJeux);
-echo $title, $desc, $link, $date, $img;
+// var_dump($CardPolitique);
+// var_dump($CardPhoto);
+// var_dump($CardJeux);
+echo $title1, $desc1, $link1, $date1, $img1;
+echo $title2, $desc2, $link2, $date2, $img2;
+echo $title3, $desc3, $link3, $date3, $img3;
