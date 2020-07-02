@@ -100,35 +100,40 @@
             </select>
           </div>
         </div><!-- checkbox -->
-        <div class="[ form-group ]">
-          <label for="color">Nombre d’articles affichés :</label>
-          <select class="form-control" name="color">
-            <option selected disabled>--</option>
-            <option value="byDefault">Par défaut</option>
-            <option value="black">Noir</option>
-            <option value="blue">Bleu</option>
-            <option value="red">Rouge</option>
-          </select>
+        <div class="modal-body">
+          <div class="[ form-group ]">
+            <label for="articleNumber">Nombre d’articles affichés :</label>
+            <select class="form-control" name="articleNumber">
+              <option selected disabled>--</option>
+              <option value="three">3</option>
+              <option value="five">5</option>
+              <option value="eight">8</option>
+            </select>
+          </div>
         </div>
-      </div><!-- checkbox -->
-      <div class="[ form-group ]">
-        <label for="color">Couleur du site :</label>
-        <select class="form-control" name="color">
-          <option selected disabled>--</option>
-          <option value="byDefault">Par défaut</option>
-          <option value="black">Noir</option>
-          <option value="blue">Bleu</option>
-          <option value="red">Rouge</option>
-        </select>
+        <!-- checkbox -->
+        <div class="modal-body">
+          <div class="[ form-group ]">
+            <input type="checkbox" id="choice1" name="subscribe" value="choix1">
+            <label for="subscribeNews">choix wu</label>
+            <input type="checkbox" id="choice2" name="subscribe" value="choix2">
+            <label for="subscribeNews">choix bba</label>
+            <input type="checkbox" id="choice3" name="subscribe" value="choix3">
+            <label for="subscribeNews">choix lu</label>
+            <input type="checkbox" id="choice4" name="subscribe" value="choix4">
+            <label for="subscribeNews">choix bba</label>
+            <input type="checkbox" id="choice5" name="subscribe" value="choix5">
+            <label for="subscribeNews">choix !</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermé</button>
+          <button type="button" class="btn btn-primary">Appliquer le changement</button>
+        </div>
       </div>
-    </div><!-- checkbox -->
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
     </div>
-  </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+  </div>
+
 
   <!-- ===============================================================/modal============================================================================ -->
 </body>
