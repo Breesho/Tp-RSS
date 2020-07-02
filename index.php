@@ -1,3 +1,5 @@
+<?php require_once "controllers/index-controller.php"?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
