@@ -6,3 +6,6 @@
     margin-top: 50px;
 }
 
+.ulDoteremove{
+    list-style-type: none;
+}

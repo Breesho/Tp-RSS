@@ -81,12 +81,12 @@
   <!-- ===============================================================/actualité============================================================================ -->
   <!-- ===============================================================modal============================================================================ -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
               aria-hidden="true">×</span></button>
-          <h4 class="modal-title">faite votre choix !</h4>
+          <h4 class="modal-title">Changer les paramètres !</h4>
         </div>
         <div class="modal-body">
           <div class="[ form-group ]">
@@ -114,16 +114,18 @@
         <!-- checkbox -->
         <div class="modal-body">
           <div class="[ form-group ]">
-            <input type="checkbox" id="choice1" name="subscribe" value="choix1">
-            <label for="subscribeNews">choix wu</label>
-            <input type="checkbox" id="choice2" name="subscribe" value="choix2">
-            <label for="subscribeNews">choix bba</label>
-            <input type="checkbox" id="choice3" name="subscribe" value="choix3">
-            <label for="subscribeNews">choix lu</label>
-            <input type="checkbox" id="choice4" name="subscribe" value="choix4">
-            <label for="subscribeNews">choix bba</label>
-            <input type="checkbox" id="choice5" name="subscribe" value="choix5">
-            <label for="subscribeNews">choix !</label>
+            <ul class="ulDoteremove">
+            <li><input type="checkbox" id="choice1" name="subscribe" value="choix1" checked>
+            <label for="subscribeNews">actualites/politique-droits</label></li>
+            <li><input type="checkbox" id="choice2" name="subscribe" value="choix2" checked>
+            <label for="subscribeNews">photo</label></li>
+            <li><input type="checkbox" id="choice3" name="subscribe" value="choix3" checked>
+            <label for="subscribeNews">jeux-video</label></li>
+            <li><input type="checkbox" id="choice4" name="subscribe" value="choix4">
+            <label for="subscribeNews">technos</label></li>
+            <li><input type="checkbox" id="choice5" name="subscribe" value="choix5">
+            <label for="subscribeNews">smartphones</label></li>
+            </ul>
           </div>
         </div>
         <div class="modal-footer">
