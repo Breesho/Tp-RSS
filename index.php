@@ -41,7 +41,7 @@
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
         <li class="nav-item">
-          <a class="nav-link " data-toggle="modal" data-target="#myModal" href="#">paramètres</a>
+          <a class="nav-link" data-toggle="modal" data-target="#modalSetting" href="#">Paramètres</a>
         </li>
       </ul>
     </div>
@@ -77,62 +77,64 @@
 
 
 
-
+  
   <!-- ===============================================================/actualité============================================================================ -->
   <!-- ===============================================================modal============================================================================ -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+  <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">×</span></button>
-          <h4 class="modal-title">faite votre choix !</h4>
+          <h4 class="col-12 modal-title text-center bg-primary text-white rounded">⇩ Choisissez vos paramètres ⇩</h4>
         </div>
         <div class="modal-body">
           <div class="[ form-group ]">
             <label for="color">Couleur du site :</label>
             <select class="form-control" name="color">
               <option selected disabled>--</option>
-              <option value="byDefault">Par défaut</option>
-              <option value="black">Noir</option>
-              <option value="blue">Bleu</option>
-              <option value="red">Rouge</option>
+              <option id="colorGreen" value="colorButton">Par défaut (vert)</option>
+              <option id="colorBlack" value="colorButton">Noir</option>
+              <option id="colorBlue" value="colorButton">Bleu</option>
+              <option id="colorRed" value="colorButton">Rouge</option>
             </select>
           </div>
-        </div><!-- checkbox -->
-        <div class="[ form-group ]">
-          <label for="color">Nombre d’articles affichés :</label>
-          <select class="form-control" name="color">
-            <option selected disabled>--</option>
-            <option value="byDefault">Par défaut</option>
-            <option value="black">Noir</option>
-            <option value="blue">Bleu</option>
-            <option value="red">Rouge</option>
-          </select>
         </div>
-      </div><!-- checkbox -->
-      <div class="[ form-group ]">
-        <label for="color">Couleur du site :</label>
-        <select class="form-control" name="color">
-          <option selected disabled>--</option>
-          <option value="byDefault">Par défaut</option>
-          <option value="black">Noir</option>
-          <option value="blue">Bleu</option>
-          <option value="red">Rouge</option>
-        </select>
+        <div class="modal-body">
+          <div class="[ form-group ]">
+            <label for="articleNumber">Nombre d’articles affichés :</label>
+            <select class="form-control" name="articleNumber">
+              <option selected disabled>--</option>
+              <option value="three">3</option>
+              <option value="five">5</option>
+              <option value="eight">8</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="[ form-group ]">
+            <label for="checkCat">Choix des sujets :</label>
+            <ul id="checkCat" class="ulDotRemove">
+              <li><input type="checkbox" id="choice1" name="subscribe" value="choix1" checked>
+                <label for="subscribeNews">actualites/politique-droits</label></li>
+              <li><input type="checkbox" id="choice2" name="subscribe" value="choix2" checked>
+                <label for="subscribeNews">photo</label></li>
+              <li><input type="checkbox" id="choice3" name="subscribe" value="choix3" checked>
+                <label for="subscribeNews">jeux-video</label></li>
+              <li><input type="checkbox" id="choice4" name="subscribe" value="choix4">
+                <label for="subscribeNews">technos</label></li>
+              <li><input type="checkbox" id="choice5" name="subscribe" value="choix5">
+                <label for="subscribeNews">smartphones</label></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Appliquer le changement</button>
+        </div>
       </div>
-    </div><!-- checkbox -->
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
     </div>
-  </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
+  </div>
   <!-- ===============================================================/modal============================================================================ -->
 </body>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
