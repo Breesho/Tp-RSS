@@ -2,7 +2,9 @@
     margin-bottom: 0px;
     background-color: rgb(117, 140, 241);
 }
-
+.jumbotron h1.display-4 {
+    color: white;
+}
 #actuality {
     margin-top: 50px;
 }
