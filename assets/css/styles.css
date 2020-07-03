@@ -2,11 +2,12 @@
     margin-bottom: 0px;
     background-color: rgb(117, 140, 241);
 }
+
 #actuality {
     margin-top: 50px;
 }
 
-.ulDotRemove{
+.ulDotRemove {
     list-style-type: none;
 }
 
