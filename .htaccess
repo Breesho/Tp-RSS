@@ -1,0 +1,15 @@
+<ifmodule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine on
+  RewriteRule index.php?page=$1 [L]
+</ifmodule>
+
+ErrorDocument 404 /index.php
+
+
+
+
+
+
+
+
