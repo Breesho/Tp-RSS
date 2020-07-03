@@ -31,7 +31,7 @@ $img1 =$CardPolitique->enclosure;
 // $img3 = $CardJeux->enclosure;
 
 
-var_dump($CardPolitique);
+// var_dump($CardPolitique);
 // print_r($CardPolitique);
 // var_dump($CardPhoto);
 // var_dump($CardJeux);
