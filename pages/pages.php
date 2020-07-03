@@ -18,7 +18,7 @@ require_once '../controllers/pages-controller.php';
 <body>
 
     <div class="container-fluid m-auto">
-        <?php foreach ($rssContents as $article) { ?>
+        <?php foreach ($RssContentsPolitiques as $article) { ?>
             <div class="card mb-3" style="max-width: 60%">
                 <div class="row no-gutters">
                     <div class="col-md-4">
