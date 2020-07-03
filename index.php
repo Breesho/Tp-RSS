@@ -51,21 +51,69 @@
   <div class="container-fluid" id="actuality">
     <div class="row m-auto d-flex justify-content-around">
 
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4 m-auto">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
+        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div class="d-flex justify-content-end">
+                  <button><a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a></button>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button>lien vers article</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4 m-auto">
         <div class="row d-block text-center p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
+        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4 m-auto">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+        </div>
+        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -77,9 +125,9 @@
 
 
 
-  
+
   <!-- ===============================================================/actualité============================================================================ -->
-  <!-- ===============================================================modal============================================================================ -->
+  <!-- ===============================================================modal pref============================================================================ -->
   <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -133,7 +181,34 @@
       </div>
     </div>
   </div>
-  <!-- ===============================================================/modal============================================================================ -->
+  <!-- ===============================================================/modal pref============================================================================ -->
+  <!-- ===============================================================/modal loop============================================================================ -->
+  <div class="modal" id="modalZoom" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="col-12 modal-title text-center">date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center">titre</p>
+        </div>
+        <div class="modal-body">
+          <p>image</p>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center">description</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Aller vers article</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===============================================================/modal loop============================================================================ -->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
