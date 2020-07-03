@@ -235,9 +235,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="col-12 modal-title text-center">date</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div>
           <p class="col-12 modal-title text-center"><?= $article->title ?></p>
