@@ -17,4 +17,8 @@ $RssContentsPolitiques = $RssPolitique->channel->item;
 $RssContentsPhotos = $RssPhoto->channel->item;
 $RssContentsGames = $RssGame->channel->item;
 
+if(isset($_POST['btn-change'])) {
+    setcookie('Color', 1 );
+}
+
 ?>

@@ -1,4 +1,6 @@
-<?php require_once "controllers/index-controller.php"?>
+<?php
+ require_once "controllers/index-controller.php"
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,7 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav w-100">
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php">sujet - 1</a>
+          <a class="nav-link" href="pages/pages.php?choice=0">sujet - 1</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="pages/pages.php">sujet - 2 </a>
@@ -65,7 +67,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                  <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
+                  <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                   <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
@@ -77,7 +79,7 @@
         <?php } ?>
       </div>
 
-      <div class="col-12 col-lg-4  ">
+      <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
@@ -91,7 +93,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                  <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
+                  <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                 <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
@@ -117,7 +119,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
+                <a class="nav-link" data-toggle="modal" data-target="#ModalGames" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                 <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
@@ -144,10 +146,12 @@
   <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
+      <form action="" method="POST">
         <div class="modal-header">
           <h4 class="col-12 modal-title text-center bg-primary text-white rounded">⇩ Choisissez vos paramètres ⇩</h4>
         </div>
         <div class="modal-body">
+          
           <div class="[ form-group ]">
             <label for="color">Couleur du site :</label>
             <select class="form-control" name="color">
@@ -188,16 +192,17 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Appliquer le changement</button>
+          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="submit" class="btn btn-primary" name="btn-change">Appliquer le changement</button>
         </div>
+      </form>
       </div>
     </div>
   </div>
   <!-- ===============================================================/modal pref============================================================================ -->
   <!-- ===============================================================/modal loop============================================================================ -->
-  
-  <div class="modal" id="modalZoom" tabindex="-1" role="dialog">
+  <?php foreach ($RssContentsPolitiques as $article) { ?>
+  <div class="modal" id="ModalPolitiques" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -207,7 +212,7 @@
           </button>
         </div>
         <div>
-          <p class="col-12 modal-title text-center">titre</p>
+          <p class="col-12 modal-title text-center"><?= $article->title ?></p>
         </div>
         <div class="modal-body">
           <p>image</p>
@@ -222,6 +227,61 @@
       </div>
     </div>
   </div>
+  <?php } ?>
+  
+  <?php foreach ($RssContentsPhotos as $article) { ?>
+  <div class="modal" id="ModalPhotos" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="col-12 modal-title text-center">date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+        </div>
+        <div class="modal-body">
+          <p>image</p>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center">description</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Aller vers article</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php } ?>
+  <div class="modal" id="ModalGames" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="col-12 modal-title text-center">date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center"> </p>
+        </div>
+        <div class="modal-body">
+          <p>image</p>
+        </div>
+        <div>
+          <p class="col-12 modal-title text-center">description</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Aller vers article</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===============================================================/modal loop============================================================================ -->
 </body>
 
