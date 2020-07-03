@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
+  
 </head>
 
 <body>
@@ -32,13 +33,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav w-100">
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php?choice=0">sujet - 1</a>
+          <a class="nav-link" href="pages/pages.php?choice=1">sujet - 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php">sujet - 2 </a>
+          <a class="nav-link" href="pages/pages.php?choice=2">sujet - 2 </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="pages/pages.php">sujet - 3</a>
+          <a class="nav-link " href="pages/pages.php?choice=3">sujet - 3</a>
         </li>
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
@@ -53,12 +54,15 @@
   <div class="container-fluid" id="actuality">
     <div class="row m-auto d-flex justify-content-around">
 
-      <div class="col-12 col-lg-4  ">
+      <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
-        <?php foreach ($RssContentsPolitiques as $article) { ?>
-        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+        <?php
+        $modal = 1;
+        foreach ($RssContentsPolitiques as $article) { 
+          ?>
+        <div class="card mb-3  d-block" >
           <div class="row no-gutters">
             <div class="col-md-4">
               <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
@@ -67,7 +71,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                  <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques" href="#">Loupe</a>
+                  <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?= $modal++ ?>" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                   <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
@@ -83,8 +87,11 @@
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
-        <?php foreach ($RssContentsPhotos as $article) { ?>
-        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+        <?php
+        $modal = 1;
+        foreach ($RssContentsPhotos as $article) { 
+          ?>
+        <div class="card mb-3   d-block" >
           <div class="row no-gutters">
             <div class="col-md-4">
               <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
@@ -93,7 +100,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                  <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos" href="#">Loupe</a>
+                  <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos<?= $modal++ ?>" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                 <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
@@ -109,8 +116,11 @@
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
-        <?php foreach ($RssContentsGames as $article) { ?>
-        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+        <?php
+        $modal = 1;
+        foreach ($RssContentsGames as $article) { 
+          ?>
+        <div class="card mb-3  d-block"  >
           <div class="row no-gutters">
             <div class="col-md-4">
               <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
@@ -119,7 +129,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                <a class="nav-link" data-toggle="modal" data-target="#ModalGames" href="#">Loupe</a>
+                <a class="nav-link" data-toggle="modal" data-target="#ModalGames<?= $modal++ ?>" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
                 <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
@@ -130,12 +140,7 @@
         </div>
         <?php } ?>
       </div>
-
-
-
     </div>
-
-
   </div>
 
 
@@ -201,83 +206,89 @@
   </div>
   <!-- ===============================================================/modal pref============================================================================ -->
   <!-- ===============================================================/modal loop============================================================================ -->
-  <?php foreach ($RssContentsPolitiques as $article) { ?>
-  <div class="modal" id="ModalPolitiques" tabindex="-1" role="dialog">
+  <?php 
+  $ModalId = 1;
+  foreach ($RssContentsPolitiques as $article) {  
+  ?>
+  <div class="modal" id="ModalPolitiques<?= $ModalId++ ?>" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="col-12 modal-title text-center">date</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="col-12 modal-title text-center"><?= $article->pubDate ?></h5>
         </div>
         <div>
           <p class="col-12 modal-title text-center"><?= $article->title ?></p>
         </div>
         <div class="modal-body">
-          <p>image</p>
+        <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
         </div>
         <div>
-          <p class="col-12 modal-title text-center">description</p>
+          <p class="col-12 modal-title text-center"><?= $article->description?></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Aller vers article</button>
+          <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
         </div>
       </div>
     </div>
   </div>
   <?php } ?>
   
-  <?php foreach ($RssContentsPhotos as $article) { ?>
-  <div class="modal" id="ModalPhotos" tabindex="-1" role="dialog">
+  <?php 
+ $ModalId = 1;
+  foreach ($RssContentsPhotos as $article) {  
+  ?>
+  <div class="modal" id="ModalPhotos<?= $ModalId++ ?>" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="col-12 modal-title text-center">date</h5>
+          <h5 class="col-12 modal-title text-center"><?= $article->pubDate ?></h5>
         </div>
         <div>
           <p class="col-12 modal-title text-center"><?= $article->title ?></p>
         </div>
         <div class="modal-body">
-          <p>image</p>
+        <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
         </div>
         <div>
-          <p class="col-12 modal-title text-center">description</p>
+          <p class="col-12 modal-title text-center"><?= $article->description?></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Aller vers article</button>
+          <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
         </div>
       </div>
     </div>
   </div>
   <?php } ?>
-  <div class="modal" id="ModalGames" tabindex="-1" role="dialog">
+
+  <?php 
+  $ModalId = 1;
+  foreach ($RssContentsGames as $article) {  
+  ?>
+  <div class="modal" id="ModalGames<?= $ModalId++ ?>" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="col-12 modal-title text-center">date</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="col-12 modal-title text-center"><?= $article->pubDate ?></h5>
         </div>
         <div>
-          <p class="col-12 modal-title text-center"> </p>
+          <p class="col-12 modal-title text-center"><?= $article->title ?></p>
         </div>
         <div class="modal-body">
-          <p>image</p>
+        <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
         </div>
         <div>
-          <p class="col-12 modal-title text-center">description</p>
+          <p class="col-12 modal-title text-center"><?= $article->description?></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Aller vers article</button>
+          <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
         </div>
       </div>
     </div>
   </div>
+  <?php } ?>
 
   <!-- ===============================================================/modal loop============================================================================ -->
 </body>

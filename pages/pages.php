@@ -1,8 +1,5 @@
 <?php
-
 require_once '../controllers/pages-controller.php';
-
-
 ?>
 
 <!DOCTYPE html>
