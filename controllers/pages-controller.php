@@ -5,7 +5,6 @@ $arrayRss = [
     $RssPolitique = simplexml_load_file($LienPolitique),
 ];
 
-$rssContents = $RssPolitique->channel->item;
-
+$RssContentsPolitiques = $RssPolitique->channel->item;
 
 ?>
