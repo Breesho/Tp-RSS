@@ -30,13 +30,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav w-100">
         <li class="nav-item">
-          <a class="nav-link" href="#">sujet - 1</a>
+          <a class="nav-link" href="pages/pages.php">sujet - 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">sujet - 2 </a>
+          <a class="nav-link" href="pages/pages.php">sujet - 2 </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">sujet - 3</a>
+          <a class="nav-link " href="pages/pages.php">sujet - 3</a>
         </li>
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
@@ -51,71 +51,84 @@
   <div class="container-fluid" id="actuality">
     <div class="row m-auto d-flex justify-content-around">
 
-      <div class="col-12 col-lg-4 m-auto">
+      <div class="col-12 col-lg-4  ">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
+        <?php foreach ($RssContentsPolitiques as $article) { ?>
         <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
           <div class="row no-gutters">
             <div class="col-md-4">
-              <img src="..." class="card-img" alt="...">
+              <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title"><?= $article->title ?></h5>
                 <div class="d-flex justify-content-end">
-                  <button><a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a></button>
+                  <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
                 </div>
                 <div class="d-flex justify-content-end">
-                  <button>lien vers article</button>
+                  <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <?php } ?>
       </div>
 
-      <div class="col-12 col-lg-4 m-auto">
-        <div class="row d-block text-center p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
-        </div>
-        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="..." class="card-img" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4 m-auto">
+      <div class="col-12 col-lg-4  ">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
+        <?php foreach ($RssContentsPhotos as $article) { ?>
         <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
           <div class="row no-gutters">
             <div class="col-md-4">
-              <img src="..." class="card-img" alt="...">
+              <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title"><?= $article->title ?></h5>
+                <div class="d-flex justify-content-end">
+                  <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
+                </div>
+                <div class="d-flex justify-content-end">
+                <a href="<?= $article->link ?>"  target="_blank">lien vers article</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <?php } ?>
       </div>
+
+      <div class="col-12 col-lg-4  ">
+        <div class="row d-block text-center  p-2 update-actu">
+          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+        </div>
+        <?php foreach ($RssContentsGames as $article) { ?>
+        <div class="card mb-3 m-auto d-block" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="<?= $article->enclosure['url']?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><?= $article->title ?></h5>
+                <div class="d-flex justify-content-end">
+                <a class="nav-link" data-toggle="modal" data-target="#modalZoom" href="#">Loupe</a>
+                </div>
+                <div class="d-flex justify-content-end">
+                <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+
 
 
     </div>
@@ -183,6 +196,7 @@
   </div>
   <!-- ===============================================================/modal pref============================================================================ -->
   <!-- ===============================================================/modal loop============================================================================ -->
+  
   <div class="modal" id="modalZoom" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">

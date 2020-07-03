@@ -10,13 +10,13 @@ require_once '../controllers/pages-controller.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sujet - 1 </title>
+    <title> Sujet</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-
+    <?php ?>
     <div class="container-fluid m-auto">
         <?php foreach ($RssContentsPolitiques as $article) { ?>
             <div class="card mb-3" style="max-width: 60%">
