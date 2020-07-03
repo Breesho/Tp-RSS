@@ -91,10 +91,10 @@
             <label for="color">Couleur du site :</label>
             <select class="form-control" name="color">
               <option selected disabled>--</option>
-              <option value="colorButton">Par défaut (blanc)</option>
-              <option value="colorButton">Noir</option>
-              <option value="colorButton">Bleu</option>
-              <option value="colorButton">Rouge</option>
+              <option id="colorGreen" value="colorButton">Par défaut (vert)</option>
+              <option id="colorBlack" value="colorButton">Noir</option>
+              <option id="colorBlue" value="colorButton">Bleu</option>
+              <option id="colorRed" value="colorButton">Rouge</option>
             </select>
           </div>
         </div><!-- checkbox -->
