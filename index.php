@@ -58,13 +58,13 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        for ($i = 0; $i < $NumberOfArticles; $i++) {
-          foreach ($RssContentsPolitiques as $article) { ?>
-
-            <div class="card mb-3  d-block">
+         $modal = 1;
+         $MaxArticles = 0;
+          foreach ($RssContentsPolitiques as $article) { 
+            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+          ?>
+            <div class="card mb-3 d-block">
               <div class="row no-gutters">
-
                 <div class="col-md-4">
                   <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
                 </div>
@@ -79,7 +79,6 @@ require_once "controllers/index-controller.php"
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           <?php } ?>
@@ -91,9 +90,11 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        foreach ($RssContentsPhotos as $article) {
-        ?>
+         $modal = 1;
+         $MaxArticles = 0;
+          foreach ($RssContentsPhotos as $article) { 
+            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+          ?>
           <div class="card mb-3   d-block">
             <div class="row no-gutters">
               <div class="col-md-4">
@@ -113,6 +114,7 @@ require_once "controllers/index-controller.php"
             </div>
           </div>
         <?php } ?>
+        <?php } ?>
       </div>
 
       <div class="col-12 col-lg-4  ">
@@ -120,9 +122,11 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        foreach ($RssContentsGames as $article) {
-        ?>
+         $modal = 1;
+         $MaxArticles = 0;
+          foreach ($RssContentsGames as $article) { 
+            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+          ?>
           <div class="card mb-3  d-block">
             <div class="row no-gutters">
               <div class="col-md-4">
@@ -141,6 +145,7 @@ require_once "controllers/index-controller.php"
               </div>
             </div>
           </div>
+        <?php } ?>
         <?php } ?>
       </div>
     </div>

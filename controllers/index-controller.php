@@ -49,18 +49,30 @@ if (isset($_POST) && !empty($_POST)) {
 
 
     if (isset($_POST["NumberOfArticles"]) && !empty($_POST["NumberOfArticles"])) {
-        if ($_POST["NumberOfArticles"] == "3") {
-            $NumberOfArticles = intval($_POST["NumberOfArticles"]);
-            setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
-        } else if ($_POST["NumberOfArticles"] == "5") {
-            $NumberOfArticles = intval($_POST["NumberOfArticles"]);
-            setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
-        } else if ($_POST["NumberOfArticles"] == "8") {
-            $NumberOfArticles = intval($_POST["NumberOfArticles"]);
-            setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
-        } else {
-            $NumberOfArticles = 3;
-            setcookie("NumberOfArticles", $$NumberOfArticles,  time() + 3600 * 24, '/');
+        foreach ($RssContentsPolitiques as $article) {
+            $MaxArticles = 0;
+            if ($MaxArticles === 3) {
+            break;
+            }
+            else if ($MaxArticles === 5) {
+            break;
+            }
+            else if ($MaxArticles === 8) {
+            break;
+            }
+            if ($_POST["NumberOfArticles"] === "3") {
+                $NumberOfArticles = intval($_POST["NumberOfArticles"]);
+                setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
+            } else if ($_POST["NumberOfArticles"] === "5") {
+                $NumberOfArticles = intval($_POST["NumberOfArticles"]);
+                setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
+            } else if ($_POST["NumberOfArticles"] === "8") {
+                $NumberOfArticles = intval($_POST["NumberOfArticles"]);
+                setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
+            } else {
+                $NumberOfArticles = 3;
+                setcookie("NumberOfArticles", $$NumberOfArticles,  time() + 3600 * 24, '/');
+            }
         }
     }
 }
