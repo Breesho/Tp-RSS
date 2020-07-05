@@ -41,10 +41,7 @@ if (isset($_POST) && !empty($_POST)) {
                 $css = "assets/css/styles.css";
                 setcookie("ColorTheme", $css,  time() + 3600 * 24, '/');
             }
-        } else {
-            $css = "assets/css/styles.css";
-            setcookie("ColorTheme", $css,  time() + 3600 * 24, '/');
-        }
+        } 
     }
 
 
@@ -69,10 +66,7 @@ if (isset($_POST) && !empty($_POST)) {
             } else if ($_POST["NumberOfArticles"] === "8") {
                 $NumberOfArticles = intval($_POST["NumberOfArticles"]);
                 setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
-            } else {
-                $NumberOfArticles = 3;
-                setcookie("NumberOfArticles", $$NumberOfArticles,  time() + 3600 * 24, '/');
-            }
+            } 
         }
     }
 }

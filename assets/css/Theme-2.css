@@ -1,4 +1,22 @@
 .jumbotron {
     margin-bottom: 0px;
-    background-color:blue;
+    background-color:#4343b4;
+  
 }
+.jumbotron h1.display-4 {
+    color: white;
+}
+.navbar {
+    background-color:#5656c7!important;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: white;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: white !important;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:checked {
+        color: white !important;
+    }

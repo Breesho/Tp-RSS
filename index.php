@@ -55,14 +55,14 @@ require_once "controllers/index-controller.php"
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 class="d-inline-block border-bottom pb-1" >Fils D'actualités</h4>
         </div>
         <?php
-         $modal = 1;
-         $MaxArticles = 0;
-          foreach ($RssContentsPolitiques as $article) { 
-            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
-          ?>
+        $modal = 1;
+        $MaxArticles = 0;
+        foreach ($RssContentsPolitiques as $article) {
+          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        ?>
             <div class="card mb-3 d-block">
               <div class="row no-gutters">
                 <div class="col-md-4">
@@ -90,30 +90,30 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-         $modal = 1;
-         $MaxArticles = 0;
-          foreach ($RssContentsPhotos as $article) { 
-            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
-          ?>
-          <div class="card mb-3   d-block">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $article->title ?></h5>
-                  <div class="d-flex justify-content-end">
-                    <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos<?= $modal++ ?>" href="#">Loupe</a>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
+        $modal = 1;
+        $MaxArticles = 0;
+        foreach ($RssContentsPhotos as $article) {
+          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        ?>
+            <div class="card mb-3   d-block">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $article->title ?></h5>
+                    <div class="d-flex justify-content-end">
+                      <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos<?= $modal++ ?>" href="#">Loupe</a>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <?php } ?>
+          <?php } ?>
         <?php } ?>
       </div>
 
@@ -122,30 +122,30 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-         $modal = 1;
-         $MaxArticles = 0;
-          foreach ($RssContentsGames as $article) { 
-            for ($MaxArticles ; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
-          ?>
-          <div class="card mb-3  d-block">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $article->title ?></h5>
-                  <div class="d-flex justify-content-end">
-                    <a class="nav-link" data-toggle="modal" data-target="#ModalGames<?= $modal++ ?>" href="#">Loupe</a>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
+        $modal = 1;
+        $MaxArticles = 0;
+        foreach ($RssContentsGames as $article) {
+          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        ?>
+            <div class="card mb-3  d-block">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $article->title ?></h5>
+                    <div class="d-flex justify-content-end">
+                      <a class="nav-link" data-toggle="modal" data-target="#ModalGames<?= $modal++ ?>" href="#">Loupe</a>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <?php } ?>
+          <?php } ?>
         <?php } ?>
       </div>
     </div>

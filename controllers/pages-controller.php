@@ -21,12 +21,4 @@ $RssContentsSmartphone = $RssSmartphone->channel->item;
 $RssContentsTechno = $RssTechno->channel->item;
 
 
-
-if(isset($_GET['choice'])) {
-
-//    var_dump($arrayRss[$_GET['choice']]);
- 
-}
- 
-
 ?>
