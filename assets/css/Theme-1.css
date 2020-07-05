@@ -1,6 +1,6 @@
 .jumbotron {
     margin-bottom: 0px;
-    background-color:rgb(12, 12, 12);
+    background-color:#0c0c0c;
 }
 .navbar {
 background-color: rgb(61, 61, 61)!important;
@@ -15,4 +15,10 @@ background-color: rgb(61, 61, 61)!important;
 
 .navbar-light .navbar-nav .nav-link:checked {
     color: white !important;
+}
+#Bg-color {
+    background-color: #0c0c0c;
+}
+label {
+    color:white;
 }

@@ -159,9 +159,9 @@ require_once "controllers/index-controller.php"
   <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form action="index.php" method="POST">
+        <form action="index.php" method="POST" id="Bg-color">
           <div class="modal-header">
-            <h4 class="col-12 modal-title text-center bg-primary text-white rounded">⇩ Choisissez vos paramètres ⇩</h4>
+            <h4 class="col-12 modal-title text-center bg-light text-black rounded">  Choisissez vos paramètres   </h4>
           </div>
           <div class="modal-body">
 

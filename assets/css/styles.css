@@ -21,11 +21,16 @@
 .navbar-light .navbar-nav .nav-link:checked {
     color: white !important;
 }
-
-
+#Bg-color {
+    background-color: #98aafc;
+}
+label {
+    color: white;
+}
 #actuality {
     margin-top: 50px;
 }
+
 
 .ulDotRemove {
     list-style-type: none;

@@ -23,3 +23,9 @@
 .navbar-light .navbar-nav .nav-link:checked {
     color: white !important;
 }
+#Bg-color {
+    background-color: #d84141;
+}
+label {
+    color: white;
+}
