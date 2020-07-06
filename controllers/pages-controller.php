@@ -23,28 +23,6 @@ $RssContentsSmartphone = $RssSmartphone->channel->item;
 $RssContentsTechno = $RssTechno->channel->item;
 
 
-$Thematique = [
-
-    'Politiques',
-    'Photos',
-    'Games',
-    'Smartphones',
-    'Technos'
- 
- ];
- 
- $myChoice1 = 1;
- $myChoice2 = 2;
- $myChoice3 = 3;
- 
- 
- $myChoices = [
-     $myChoice1,
-     $myChoice2,
-     $myChoice3
- ];
- 
-
 if(isset($_GET['choice'])) {
     $RssContents = $ArrayRss[$_GET['choice']]->channel->item;
 }
