@@ -45,3 +45,11 @@ label {
 .ulDotRemove {
     list-style-type: none;
 }
+
+@media screen and (max-width: 576px) {
+    #actuTitle {
+        background-color: #dd5a5a;
+        color: white;
+        width: 100%;
+    }
+ }
