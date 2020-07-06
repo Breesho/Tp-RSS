@@ -55,34 +55,40 @@ require_once "controllers/index-controller.php"
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1" >Fils D'actualités</h4>
+          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        $MaxArticles = 0;
-        foreach ($RssContentsPolitiques as $article) {
-          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        $Modal = 1;
+        $Article = 0;
+        $MaxArticles = $NumberOfArticles;
+        foreach ($RssContentsPolitiques as $ElementArticle) {
         ?>
-            <div class="card mb-3 d-block">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $article->title ?></h5>
-                    <div class="d-flex justify-content-end">
-                      <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?= $modal++ ?>" href="#">Loupe</a>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
-                    </div>
+          <div class="card mb-3 d-block">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
+                  <div class="d-flex justify-content-end">
+                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
                   </div>
                 </div>
               </div>
             </div>
-          <?php } ?>
-        <?php } ?>
+          </div>
+
+        <?php
+          $Article++;
+          if ($Article >= $MaxArticles) {
+            break;
+          }
+        }
+        ?>
       </div>
 
       <div class="col-12 col-lg-4">
@@ -90,66 +96,76 @@ require_once "controllers/index-controller.php"
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        $MaxArticles = 0;
-        foreach ($RssContentsPhotos as $article) {
-          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        $Modal = 1;
+        $Article = 0;
+        $MaxArticles = $NumberOfArticles;
+        foreach ($RssContentsPhotos as $ElementArticle) {
         ?>
-            <div class="card mb-3   d-block">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $article->title ?></h5>
-                    <div class="d-flex justify-content-end">
-                      <a class="nav-link" data-toggle="modal" data-target="#ModalPhotos<?= $modal++ ?>" href="#">Loupe</a>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
-                    </div>
+          <div class="card mb-3 d-block">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
+                  <div class="d-flex justify-content-end">
+                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
                   </div>
                 </div>
               </div>
             </div>
-          <?php } ?>
-        <?php } ?>
+          </div>
+
+        <?php
+          $Article++;
+          if ($Article >= $MaxArticles) {
+            break;
+          }
+        }
+        ?>
       </div>
 
-      <div class="col-12 col-lg-4  ">
+      <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
           <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
-        $modal = 1;
-        $MaxArticles = 0;
-        foreach ($RssContentsGames as $article) {
-          for ($MaxArticles; $MaxArticles < $NumberOfArticles; $MaxArticles++) {
+        $Modal = 1;
+        $Article = 0;
+        $MaxArticles = $NumberOfArticles;
+        foreach ($RssContentsGames as $ElementArticle) {
         ?>
-            <div class="card mb-3  d-block">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $article->title ?></h5>
-                    <div class="d-flex justify-content-end">
-                      <a class="nav-link" data-toggle="modal" data-target="#ModalGames<?= $modal++ ?>" href="#">Loupe</a>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <a href="<?= $article->link ?>" target="_blank">lien vers article</a>
-                    </div>
+          <div class="card mb-3 d-block">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
+                  <div class="d-flex justify-content-end">
+                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
                   </div>
                 </div>
               </div>
             </div>
-          <?php } ?>
-        <?php } ?>
+          </div>
+
+        <?php
+          $Article++;
+          if ($Article >= $MaxArticles) {
+            break;
+          }
+        }
+        ?>
       </div>
-    </div>
-  </div>
 
 
 
@@ -161,7 +177,7 @@ require_once "controllers/index-controller.php"
       <div class="modal-content">
         <form action="index.php" method="POST" id="Bg-color">
           <div class="modal-header">
-            <h4 class="col-12 modal-title text-center bg-light text-black rounded">  Choisissez vos paramètres   </h4>
+            <h4 class="col-12 modal-title text-center bg-light text-black rounded"> Choisissez vos paramètres </h4>
           </div>
           <div class="modal-body">
 
@@ -187,7 +203,7 @@ require_once "controllers/index-controller.php"
           </div>
           <div class="modal-body">
             <div class="[ form-group ]">
-              <label for="checkCat">Choix des sujets :</label>
+              <label for="checkCat"> Choix des sujets : </label>
               <ul id="checkCat" class="ulDotRemove">
                 <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="<?$LienPolitique?>">
                   <label for="subscribeNews">actualites/politique-droits</label></li>
