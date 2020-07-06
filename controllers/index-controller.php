@@ -53,28 +53,27 @@ $myChoices = [
     $myChoice3
 ];
 
-if (isset($_COOKIE['myChoices'])){
-    $myChoices = explode('/', $_COOKIE['myChoices']);
-    $myChoice1 = $myChoices[0];
-    $myChoice2 = $myChoices[1];
-    $myChoice3 = $myChoices[2]; 
-}
-if (isset($_POST['btn-submit'])) {
-    $paramChoices = array();
+// if (isset($_COOKIE['myChoices'])){
+//     $myChoices = explode('/', $_COOKIE['myChoices']);
+//     $myChoice1 = $myChoices[0];
+//     $myChoice2 = $myChoices[1];
+//     $myChoice3 = $myChoices[2]; 
+// }
+// if (isset($_POST)) {
+//     $paramChoices = array();
 
-    for ($i = 1; $i <= 5; $i++) {
-        $choice = 'choix' . $i;
-        if (isset($_POST[$choice]) && count($paramChoices) <= 3) {
-            array_push($paramChoices, $_POST[$choice]);
-        }
-    }
-
-    if (count($paramChoices) == 3) {
-        setcookie('myChoices', $paramChoices[0] . '/' . $paramChoices[1] . '/' . $paramChoices[2], time() + 3600);
-        header('Location: index.php');
-        exit;
-    }
-}
+//     for ($i = 1; $i <= 5; $i++) {
+//         $choice = 'choix' . $i;
+//         if (isset($_POST[$choice]) && count($paramChoices) <= 3) {
+//             array_push($paramChoices, $_POST[$choice]);
+//         }
+//     }
+//     if (count($paramChoices) == 3) {
+//         setcookie('myChoices', $paramChoices[0] . '/' . $paramChoices[1] . '/' . $paramChoices[2], time() + 3600);
+//         header('Location: index.php');
+//         exit;
+//     }
+// }
 
 
 $css = "assets/css/styles.css";
