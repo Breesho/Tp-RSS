@@ -165,11 +165,7 @@ require_once "controllers/index-controller.php";
       </div>
 
       <footer>
-<<<<<<< HEAD
           
-=======
-        <p>lol</p>
->>>>>>> 07fcb30e985683dfcaf4b2c1ff1ca19175f67b11
       </footer>
 
 
@@ -206,23 +202,43 @@ require_once "controllers/index-controller.php";
               <div class="modal-body">
                 <div class="[ form-group]">
                   <label for="checkCat"> Choix des sujets : </label>
-                  <ul id="checkCat" class="ulDotRemove">
-                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe0" value="0">
-                      <label for="subscribeNews">Actualites/Politique-Droits</label></li>
-                    <li><input type="checkbox" id="PhotosCheck" name="subscribe1" value="1">
-                      <label for="subscribeNews">Photos</label></li>
-                    <li><input type="checkbox" id="GamesCheck" name="subscribe2" value="2">
-                      <label for="subscribeNews">Jeux-videos</label></li>
-                    <li><input type="checkbox" id="TechnosCheck" name="subscribe3" value="3">
-                      <label for="subscribeNews">Technos</label></li>
-                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe4" value="4">
-                      <label for="subscribeNews">Smartphones</label></li>
-                  </ul>
+                    <div class="modal-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="choix1" <?= isset($_COOKIE['myChoices']) && in_array(0, $myChoices) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="defaultCheck1">
+                                Politiques
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="defaultCheck2" name="choix2" <?= isset($_COOKIE['myChoices']) && in_array(1, $myChoices) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="defaultCheck2">
+                                Photos
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="2" id="defaultCheck3" name="choix3" <?= isset($_COOKIE['myChoices']) && in_array(2, $myChoices) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="defaultCheck3">
+                               Jeux-Videos
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="3" id="defaultCheck4" name="choix4" <?= isset($_COOKIE['myChoices']) && in_array(3, $myChoices) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="defaultCheck4">
+                              Smartphones
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="4" id="defaultCheck5" name="choix5" <?= isset($_COOKIE['myChoices']) && in_array(4, $myChoices) ? 'checked' : '' ?>>
+                            <label class=" form-check-label" for="defaultCheck5">
+                                Technologie
+                            </label>
+                        </div>
+                    </div>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary btn-modalparametreclose" data-dismiss="modal">Fermer</button>
-                <button type="submit" class="btn btn-primary btn-modalparametrechange" name="Submit">Appliquer le changement</button>
+                <button type="submit" class="btn btn-primary btn-modalparametrechange" name="btn-submit">Appliquer le changement</button>
               </div>
             </form>
           </div>
