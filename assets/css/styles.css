@@ -1,56 +1,59 @@
 .card-body h5 {
     font-size: 1.00rem;
 }
+
 .card-body {
     padding: 0rem;
     margin-left: 10px;
 }
-.btn-modalparametreclose{
+
+.btn-modalparametreclose {
     background-color: white;
     color: black;
     border: none;
 }
-.btn-modalparametreclose:hover{
-    background-color:white ;
+
+.btn-modalparametreclose:hover {
+    background-color: white;
     color: #758cf1;
     border: none;
 }
+
 .btn-modalparametrechange {
     background-color: white;
     color: black;
     border: none;
 }
+
 .btn-modalparametrechange:hover {
-    background-color:white ;
+    background-color: white;
     color: #758cf1;
     border: none;
 }
+
 .btn-loop {
     background-color: #758cf1;
     color: white;
 }
-.btn-link-article{
+
+.btn-link-article {
     background-color: #758cf1;
     color: white;
 }
+
 #actuality {
     padding-top: 50px;
     background-color: whitesmoke;
 }
 
-
-
 .jumbotron {
     margin-bottom: 0px;
-    background-color: #758cf1;
-}
-.jumbotron h1.display-4 {
-    color: white;
 }
 
 .navbar {
-    background-color:#98aafc!important;
+    background-color: #98aafc !important;
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
@@ -62,13 +65,14 @@
 .navbar-light .navbar-nav .nav-link:checked {
     color: white !important;
 }
+
 #Bg-color {
     background-color: #98aafc;
 }
+
 label {
     color: white;
 }
-
 
 .ulDotRemove {
     list-style-type: none;
@@ -80,4 +84,4 @@ label {
         color: white;
         width: 100%;
     }
- }
+}

@@ -10,7 +10,8 @@ require_once "controllers/index-controller.php";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flux - RSS</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="<?= $css ?>">
 
 </head>
@@ -18,13 +19,14 @@ require_once "controllers/index-controller.php";
 <body>
 
   <div class="jumbotron jumbotron-fluid text-center">
-    <div class="container">
-      <h1 class="display-4">Super Rss Reader</h1>
+    <div class="dflex justify-content-start">
+      <img src="assets/img/logo.png" alt="logo RSS">
     </div>
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,24 +62,26 @@ require_once "controllers/index-controller.php";
         $MaxArticles = $NumberOfArticles;
         foreach ($RssChoices[$myChoices[0]] as $ElementArticle) {
         ?>
-          <div class="card mb-3 d-block">
-            <div class="row no-gutters" style="min-height: 150px;">
-              <div class="col-md-4">
-                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                </div>
-              </div>
-              <div>
-                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux1-<?= $Modal++ ?>" href="#">Loupe</a>
-              </div>
-              <div>
-                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
+        <div class="card mb-3 d-block">
+          <div class="row no-gutters" style="min-height: 150px;">
+            <div class="col-md-4">
+              <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><?= $ElementArticle->title ?></h5>
               </div>
             </div>
+            <div>
+              <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux1-<?= $Modal++ ?>"
+                href="#">Loupe</a>
+            </div>
+            <div>
+              <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers
+                article</a>
+            </div>
           </div>
+        </div>
 
         <?php
           $Article++;
@@ -98,24 +102,26 @@ require_once "controllers/index-controller.php";
         $MaxArticles = $NumberOfArticles;
         foreach ($RssChoices[$myChoices[1]] as $ElementArticle) {
         ?>
-          <div class="card mb-3 d-block">
-            <div class="row no-gutters" style="min-height: 150px;">
-              <div class="col-md-4">
-                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                </div>
-              </div>
-              <div>
-                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux2-<?= $Modal++ ?>" href="#">Loupe</a>
-              </div>
-              <div>
-                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
+        <div class="card mb-3 d-block">
+          <div class="row no-gutters" style="min-height: 150px;">
+            <div class="col-md-4">
+              <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><?= $ElementArticle->title ?></h5>
               </div>
             </div>
+            <div>
+              <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux2-<?= $Modal++ ?>"
+                href="#">Loupe</a>
+            </div>
+            <div>
+              <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers
+                article</a>
+            </div>
           </div>
+        </div>
 
         <?php
           $Article++;
@@ -136,24 +142,26 @@ require_once "controllers/index-controller.php";
         $MaxArticles = $NumberOfArticles;
         foreach ($RssChoices[$myChoices[2]] as $ElementArticle) {
         ?>
-          <div class="card mb-3 d-block">
-            <div class="row no-gutters" style="min-height: 150px;">
-              <div class="col-md-4">
-                <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                </div>
-              </div>
-              <div>
-                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux3-<?= $Modal++ ?>" href="#">Loupe</a>
-              </div>
-              <div>
-                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
+        <div class="card mb-3 d-block">
+          <div class="row no-gutters" style="min-height: 150px;">
+            <div class="col-md-4">
+              <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><?= $ElementArticle->title ?></h5>
               </div>
             </div>
+            <div>
+              <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux3-<?= $Modal++ ?>"
+                href="#">Loupe</a>
+            </div>
+            <div>
+              <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers
+                article</a>
+            </div>
           </div>
+        </div>
 
         <?php
           $Article++;
@@ -165,11 +173,7 @@ require_once "controllers/index-controller.php";
       </div>
 
       <footer>
-<<<<<<< HEAD
-          
-=======
-        <p>lol</p>
->>>>>>> 07fcb30e985683dfcaf4b2c1ff1ca19175f67b11
+
       </footer>
 
 
@@ -221,8 +225,10 @@ require_once "controllers/index-controller.php";
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary btn-modalparametreclose" data-dismiss="modal">Fermer</button>
-                <button type="submit" class="btn btn-primary btn-modalparametrechange" name="Submit">Appliquer le changement</button>
+                <button type="submit" class="btn btn-secondary btn-modalparametreclose"
+                  data-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary btn-modalparametrechange" name="Submit">Appliquer le
+                  changement</button>
               </div>
             </form>
           </div>
@@ -233,83 +239,86 @@ require_once "controllers/index-controller.php";
       $ModalId = 1;
       foreach ($RssChoices[$myChoices[0]] as $article) {
       ?>
-        <div class="modal" id="Modal-flux1-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-              </div>
-              <div>
-                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-              </div>
-              <div class="modal-body">
-                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
-              </div>
+      <div class="modal" id="Modal-flux1-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+            </div>
+            <div>
+              <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+            </div>
+            <div class="modal-body">
+              <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
             </div>
           </div>
         </div>
+      </div>
       <?php } ?>
 
       <?php
       $ModalId = 1;
       foreach ($RssChoices[$myChoices[1]] as $article) {
       ?>
-        <div class="modal" id="Modal-flux2-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-              </div>
-              <div>
-                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-              </div>
-              <div class="modal-body">
-                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
-              </div>
+      <div class="modal" id="Modal-flux2-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+            </div>
+            <div>
+              <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+            </div>
+            <div class="modal-body">
+              <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
             </div>
           </div>
         </div>
+      </div>
       <?php } ?>
 
       <?php
       $ModalId = 1;
       foreach ($RssChoices[$myChoices[2]] as $article) {
       ?>
-        <div class="modal" id="Modal-flux3-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-              </div>
-              <div>
-                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-              </div>
-              <div class="modal-body">
-                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
-              </div>
+      <div class="modal" id="Modal-flux3-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+            </div>
+            <div>
+              <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+            </div>
+            <div class="modal-body">
+              <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
             </div>
           </div>
         </div>
+      </div>
       <?php } ?>
 
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
 </body>
 
