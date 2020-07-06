@@ -94,5 +94,8 @@ if (isset($_POST) && !empty($_POST)) {
             }
         }
     }
+    if (isset($_POST["NumberOfArticles"]) && !empty($_POST["NumberOfArticles"])) {
+
+    }
     
 }

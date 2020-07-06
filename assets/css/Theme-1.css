@@ -42,7 +42,6 @@ background-color: rgb(61, 61, 61)!important;
 label {
     color:white;
 }
-
-h1 {
-    color: white;
+.ulDotRemove {
+    list-style-type: none;
 }
