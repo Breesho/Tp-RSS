@@ -1,3 +1,15 @@
+.btn-loop {
+    background-color: #5656c7;
+    color: white;
+}
+.btn-link-article{
+    background-color: #5656c7;
+    color: white;
+}
+#actuality {
+    padding-top: 50px;
+    background-color: whitesmoke;
+}
 .jumbotron {
     margin-bottom: 0px;
     background-color: #4343b4;

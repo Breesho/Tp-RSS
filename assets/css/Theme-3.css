@@ -1,3 +1,16 @@
+.btn-loop {
+    background-color: #dd5a5a;
+    color: white;
+}
+.btn-link-article{
+    background-color: #dd5a5a;
+    color: white;
+}
+#actuality {
+    padding-top: 50px;
+    background-color: whitesmoke;
+}
+
 .jumbotron {
     margin-bottom: 0px;
     background-color: #d84141;
@@ -9,7 +22,7 @@
 }
 
 .navbar {
-    background-color: #dd5a5a !important;
+    background-color: #dd5a5a!important;
 }
 
 .navbar-light .navbar-nav .nav-link {

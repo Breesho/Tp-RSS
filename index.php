@@ -10,7 +10,6 @@ require_once "controllers/index-controller.php"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flux - RSS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="<?= $css ?>">
 
 </head>
@@ -32,13 +31,13 @@ require_once "controllers/index-controller.php"
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav w-100">
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php?choice=1">sujet - 1</a>
+          <a class="nav-link" href="pages/pages.php?choice=0">Premier Sujet</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php?choice=2">sujet - 2 </a>
+          <a class="nav-link" href="pages/pages.php?choice=1">Second Sujet</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="pages/pages.php?choice=3">sujet - 3</a>
+          <a class="nav-link " href="pages/pages.php?choice=2">Troisième sujet</a>
         </li>
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
@@ -51,7 +50,7 @@ require_once "controllers/index-controller.php"
   <!-- ===============================================================/navbar============================================================================ -->
   <!-- ===============================================================actualité============================================================================ -->
   <div class="container-fluid" id="actuality">
-    <div class="row m-auto d-flex justify-content-around">
+    <div class=" col-10 row m-auto">
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
@@ -61,7 +60,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssContentsPolitiques as $ElementArticle) {
+        foreach ($RssChoices[0] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -71,13 +70,13 @@ require_once "controllers/index-controller.php"
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                  <div class="d-flex justify-content-end">
-                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
-                  </div>
                 </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-loop m-2"  data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
           </div>
@@ -99,7 +98,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssContentsPhotos as $ElementArticle) {
+        foreach ($RssChoices[1] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -109,13 +108,13 @@ require_once "controllers/index-controller.php"
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                  <div class="d-flex justify-content-end">
-                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
-                  </div>
                 </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
           </div>
@@ -137,7 +136,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssContentsGames as $ElementArticle) {
+        foreach ($RssChoices[3] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -147,13 +146,13 @@ require_once "controllers/index-controller.php"
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
-                  <div class="d-flex justify-content-end">
-                    <a class="nav-link" data-toggle="modal" data-target="#ModalPolitiques<?=  $Modal++ ?>" href="#">Loupe</a>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <a href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
-                  </div>
                 </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
           </div>
@@ -167,152 +166,146 @@ require_once "controllers/index-controller.php"
         ?>
       </div>
 
+      <footer>
+
+      </footer>
 
 
 
-  <!-- ===============================================================/actualité============================================================================ -->
-  <!-- ===============================================================modal pref============================================================================ -->
-  <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <form action="index.php" method="POST" id="Bg-color">
-          <div class="modal-header">
-            <h4 class="col-12 modal-title text-center bg-light text-black rounded"> Choisissez vos paramètres </h4>
-          </div>
-          <div class="modal-body">
+      <!-- ===============================================================/actualité============================================================================ -->
+      <!-- ===============================================================modal pref============================================================================ -->
+      <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="" method="POST" id="Bg-color">
+              <div class="modal-header">
+                <h4 class="col-12 modal-title text-center bg-light text-black rounded"> Choisissez vos paramètres </h4>
+              </div>
+              <div class="modal-body">
 
-            <div class="[ form-group ]">
-              <label for="ColorTheme">Couleur du site :</label>
-              <select class="form-control" name="ColorTheme" id="ColorTheme">
-                <option value="ColorDefault">Par défaut</option>
-                <option value="ColorBlack">Noir</option>
-                <option value="ColorBlue">Bleu</option>
-                <option value="ColorRed">Rouge</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="[ form-group ]">
-              <label for="NumberOfArticles">Nombre d’articles affichés :</label>
-              <select class="form-control" name="NumberOfArticles" id="NumberOfArticles">
-                <option value="3">3</option>
-                <option value="5">5</option>
-                <option value="8">8</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="[ form-group ]">
-              <label for="checkCat"> Choix des sujets : </label>
-              <ul id="checkCat" class="ulDotRemove">
-                <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="<?$LienPolitique?>">
-                  <label for="subscribeNews">actualites/politique-droits</label></li>
-                <li><input type="checkbox" id="PhotosCheck" name="subscribe" value="<?$LienPhoto?>">
-                  <label for="subscribeNews">photo</label></li>
-                <li><input type="checkbox" id="GamesCheck" name="subscribe" value="<?$LienGame?>">
-                  <label for="subscribeNews">jeux-video</label></li>
-                <li><input type="checkbox" id="TechnosCheck" name="subscribe" value="<?$LienSmartphone?>">
-                  <label for="subscribeNews">technos</label></li>
-                <li><input type="checkbox" id="SmartphonesCheck" name="subscribe" value="<?$LienTechno?>">
-                  <label for="subscribeNews">smartphones</label></li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-primary" name="Submit">Appliquer le changement</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- ===============================================================/modal pref============================================================================ -->
-  <!-- ===============================================================/modal loop============================================================================ -->
-  <?php
-  $ModalId = 1;
-  foreach ($RssContentsPolitiques as $article) {
-  ?>
-    <div class="modal" id="ModalPolitiques<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-          </div>
-          <div>
-            <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-          </div>
-          <div class="modal-body">
-            <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-          </div>
-          <div>
-            <!-- <p class="col-12 modal-title text-center"><?= $article->description ?></p> -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+                <div class="[ form-group ]">
+                  <label for="ColorTheme">Couleur du site :</label>
+                  <select class="form-control" name="ColorTheme" id="ColorTheme">
+                    <option value="ColorDefault">Par défaut</option>
+                    <option value="ColorBlack">Noir</option>
+                    <option value="ColorBlue">Bleu</option>
+                    <option value="ColorRed">Rouge</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="[ form-group ]">
+                  <label for="NumberOfArticles">Nombre d’articles affichés :</label>
+                  <select class="form-control" name="NumberOfArticles" id="NumberOfArticles">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="[ form-group ]">
+                  <label for="checkCat"> Choix des sujets : </label>
+                  <ul id="checkCat" class="ulDotRemove">
+                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="<?= $LienPolitique ?>">
+                      <label for="subscribeNews">actualites/politique-droits</label></li>
+                    <li><input type="checkbox" id="PhotosCheck" name="subscribe" value="<?= $LienPhoto ?>">
+                      <label for="subscribeNews">photo</label></li>
+                    <li><input type="checkbox" id="GamesCheck" name="subscribe" value="<?= $LienGame ?>">
+                      <label for="subscribeNews">jeux-video</label></li>
+                    <li><input type="checkbox" id="TechnosCheck" name="subscribe" value="<?= $LienSmartphone ?>">
+                      <label for="subscribeNews">technos</label></li>
+                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe" value="<?= $LienTechno ?>">
+                      <label for="subscribeNews">smartphones</label></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary btn-modalparametreclose" data-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary btn-modalparametrechange" name="Submit">Appliquer le changement</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  <?php } ?>
-
-  <?php
-  $ModalId = 1;
-  foreach ($RssContentsPhotos as $article) {
-  ?>
-    <div class="modal" id="ModalPhotos<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-          </div>
-          <div>
-            <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-          </div>
-          <div class="modal-body">
-            <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-          </div>
-          <div>
-            <!-- <p class="col-12 modal-title text-center"><?= $article->description ?></p> -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+      <!-- ===============================================================/modal pref============================================================================ -->
+      <!-- ===============================================================/modal loop============================================================================ -->
+      <?php
+      $ModalId = 1;
+      foreach ($RssChoices[3] as $article) {
+      ?>
+        <div class="modal" id="ModalPolitiques<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+              </div>
+              <div>
+                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+              </div>
+              <div class="modal-body">
+                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  <?php } ?>
+      <?php } ?>
 
-  <?php
-  $ModalId = 1;
-  foreach ($RssContentsGames as $article) {
-  ?>
-    <div class="modal" id="ModalGames<?= $ModalId++ ?>" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
-          </div>
-          <div>
-            <p class="col-12 modal-title text-center"><?= $article->title ?></p>
-          </div>
-          <div class="modal-body">
-            <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
-          </div>
-          <div>
-            <!-- <p class="col-12 modal-title text-center"><?= $article->description ?></p> -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+      <?php
+      $ModalId = 1;
+      foreach ($RssChoices[1] as $article) {
+      ?>
+        <div class="modal" id="ModalPhotos<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+              </div>
+              <div>
+                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+              </div>
+              <div class="modal-body">
+                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  <?php } ?>
+      <?php } ?>
 
-  <!-- ===============================================================/modal loop============================================================================ -->
+      <?php
+      $ModalId = 1;
+      foreach ($RssChoices[2] as $article) {
+      ?>
+        <div class="modal" id="ModalGames<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="col-12 modal-title text-center"><?= strftime('%c', strtotime($article->pubDate)) ?></h5>
+              </div>
+              <div>
+                <p class="col-12 modal-title text-center"><?= $article->title ?></p>
+              </div>
+              <div class="modal-body">
+                <img src="<?= $article->enclosure['url'] ?>" class="card-img" alt="...">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <a type="button" class="btn btn-primary" href="<?= $article->link ?>">Aller vers article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php } ?>
+
+      <!-- ===============================================================/modal loop============================================================================ -->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

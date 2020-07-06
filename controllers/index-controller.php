@@ -22,7 +22,19 @@ $RssContentsGames = $RssGame->channel->item;
 $RssContentsSmartphone = $RssSmartphone->channel->item;
 $RssContentsTechno = $RssTechno->channel->item;
 
-$css = "";
+$RssChoices = [
+
+    $RssContentsPolitiques,
+    $RssContentsPhotos,
+    $RssContentsGames,
+    $RssContentsSmartphone,
+    $RssContentsTechno
+
+];
+
+
+
+$css = "assets/css/styles.css";
 $NumberOfArticles = 3;
 
 if (isset($_POST) && !empty($_POST)) {
@@ -41,18 +53,15 @@ if (isset($_POST) && !empty($_POST)) {
                 $css = "assets/css/styles.css";
                 setcookie("ColorTheme", $css,  time() + 3600 * 24, '/');
             }
-        } 
+        }
     }
-
 
     if (isset($_POST["NumberOfArticles"]) && !empty($_POST["NumberOfArticles"])) {
         foreach ($RssContentsPolitiques as $article) {
-              $MaxArticles=0;
+            $MaxArticles = 0;
             if ($MaxArticles === 3) {
-            }
-            else if ($MaxArticles === 5) {
-            }
-            else if ($MaxArticles === 8) {
+            } else if ($MaxArticles === 5) {
+            } else if ($MaxArticles === 8) {
             }
             if ($_POST["NumberOfArticles"] === "3") {
                 $NumberOfArticles = intval($_POST["NumberOfArticles"]);
@@ -63,7 +72,10 @@ if (isset($_POST) && !empty($_POST)) {
             } else if ($_POST["NumberOfArticles"] === "8") {
                 $NumberOfArticles = intval($_POST["NumberOfArticles"]);
                 setcookie("NumberOfArticles", $_POST["NumberOfArticles"],  time() + 3600 * 24, '/');
-            } 
+            }
         }
+    }
+    if (isset($_POST["checkCat"]) && !empty($_POST["checkCat"])) {
+       
     }
 }
