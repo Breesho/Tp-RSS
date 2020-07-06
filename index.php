@@ -54,7 +54,7 @@ require_once "controllers/index-controller.php"
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
         $Modal = 1;
@@ -92,7 +92,7 @@ require_once "controllers/index-controller.php"
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
         $Modal = 1;
@@ -130,7 +130,7 @@ require_once "controllers/index-controller.php"
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
         </div>
         <?php
         $Modal = 1;

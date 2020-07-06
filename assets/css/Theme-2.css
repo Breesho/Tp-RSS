@@ -43,3 +43,11 @@
 label {
     color: white;
 }
+
+@media screen and (max-width: 576px) {
+    #actuTitle {
+        background-color: #4343b4;
+        color: white;
+        width: 100%;
+    }
+ }
