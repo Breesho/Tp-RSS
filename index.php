@@ -1,5 +1,6 @@
 <?php
-require_once "controllers/index-controller.php"
+require_once "controllers/index-controller.php";
+// var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -16,14 +17,12 @@ require_once "controllers/index-controller.php"
 
 <body>
 
-  <!-- ===============================================================header============================================================================ -->
   <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
       <h1 class="display-4">Super Rss Reader</h1>
     </div>
   </div>
-  <!-- ===============================================================/header============================================================================ -->
-  <!-- ===============================================================navbar============================================================================ -->
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,10 +46,9 @@ require_once "controllers/index-controller.php"
       </ul>
     </div>
   </nav>
-  <!-- ===============================================================/navbar============================================================================ -->
-  <!-- ===============================================================actualité============================================================================ -->
+
   <div class="container-fluid" id="actuality">
-    <div class=" col-10 row m-auto">
+    <div class=" col-lg-10 row m-auto">
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
@@ -63,7 +61,7 @@ require_once "controllers/index-controller.php"
         foreach ($RssChoices[$myChoices[0]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
-            <div class="row no-gutters">
+            <div class="row no-gutters" style="min-height: 150px;">
               <div class="col-md-4">
                 <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
               </div>
@@ -72,10 +70,10 @@ require_once "controllers/index-controller.php"
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
                 </div>
               </div>
-              <div class="d-flex justify-content-end">
-                <a class="nav-link btn-loop m-2"  data-toggle="modal" data-target="#Modal-flux1-<?= $Modal++ ?>" href="#">Loupe</a>
+              <div>
+                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux1-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
-              <div class="d-flex justify-content-end">
+              <div>
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
@@ -101,7 +99,7 @@ require_once "controllers/index-controller.php"
         foreach ($RssChoices[$myChoices[1]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
-            <div class="row no-gutters">
+            <div class="row no-gutters" style="min-height: 150px;">
               <div class="col-md-4">
                 <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
               </div>
@@ -110,10 +108,10 @@ require_once "controllers/index-controller.php"
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
                 </div>
               </div>
-              <div class="d-flex justify-content-end">
+              <div>
                 <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux2-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
-              <div class="d-flex justify-content-end">
+              <div>
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
@@ -139,7 +137,7 @@ require_once "controllers/index-controller.php"
         foreach ($RssChoices[$myChoices[2]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
-            <div class="row no-gutters">
+            <div class="row no-gutters" style="min-height: 150px;">
               <div class="col-md-4">
                 <img src="<?= $ElementArticle->enclosure['url'] ?>" class="card-img" alt="...">
               </div>
@@ -148,10 +146,10 @@ require_once "controllers/index-controller.php"
                   <h5 class="card-title"><?= $ElementArticle->title ?></h5>
                 </div>
               </div>
-              <div class="d-flex justify-content-end">
+              <div>
                 <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux3-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
-              <div class="d-flex justify-content-end">
+              <div>
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
               </div>
             </div>
@@ -167,13 +165,15 @@ require_once "controllers/index-controller.php"
       </div>
 
       <footer>
+<<<<<<< HEAD
           
+=======
+        <p>lol</p>
+>>>>>>> 07fcb30e985683dfcaf4b2c1ff1ca19175f67b11
       </footer>
 
 
 
-      <!-- ===============================================================/actualité============================================================================ -->
-      <!-- ===============================================================modal pref============================================================================ -->
       <div class="modal fade" id="modalSetting" tabindex="-1" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -207,16 +207,16 @@ require_once "controllers/index-controller.php"
                 <div class="[ form-group]">
                   <label for="checkCat"> Choix des sujets : </label>
                   <ul id="checkCat" class="ulDotRemove">
-                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="">
-                      <label for="subscribeNews">actualites/politique-droits</label></li>
-                    <li><input type="checkbox" id="PhotosCheck" name="subscribe" value="">
-                      <label for="subscribeNews">photo</label></li>
-                    <li><input type="checkbox" id="GamesCheck" name="subscribe" value="">
-                      <label for="subscribeNews">jeux-video</label></li>
-                    <li><input type="checkbox" id="TechnosCheck" name="subscribe" value="">
-                      <label for="subscribeNews">technos</label></li>
-                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe" value="">
-                      <label for="subscribeNews">smartphones</label></li>
+                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe0" value="0">
+                      <label for="subscribeNews">Actualites/Politique-Droits</label></li>
+                    <li><input type="checkbox" id="PhotosCheck" name="subscribe1" value="1">
+                      <label for="subscribeNews">Photos</label></li>
+                    <li><input type="checkbox" id="GamesCheck" name="subscribe2" value="2">
+                      <label for="subscribeNews">Jeux-videos</label></li>
+                    <li><input type="checkbox" id="TechnosCheck" name="subscribe3" value="3">
+                      <label for="subscribeNews">Technos</label></li>
+                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe4" value="4">
+                      <label for="subscribeNews">Smartphones</label></li>
                   </ul>
                 </div>
               </div>
@@ -228,8 +228,7 @@ require_once "controllers/index-controller.php"
           </div>
         </div>
       </div>
-      <!-- ===============================================================/modal pref============================================================================ -->
-      <!-- ===============================================================/modal loop============================================================================ -->
+
       <?php
       $ModalId = 1;
       foreach ($RssChoices[$myChoices[0]] as $article) {
@@ -305,7 +304,7 @@ require_once "controllers/index-controller.php"
         </div>
       <?php } ?>
 
-      <!-- ===============================================================/modal loop============================================================================ -->
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

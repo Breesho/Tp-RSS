@@ -39,6 +39,9 @@
 #Bg-color {
     background-color: #4343b4;
 }
+.ulDotRemove {
+    list-style-type: none;
+}
 
 label {
     color: white;
