@@ -165,7 +165,11 @@ require_once "controllers/index-controller.php";
       </div>
 
       <footer>
+<<<<<<< HEAD
+          
+=======
         <p>lol</p>
+>>>>>>> 07fcb30e985683dfcaf4b2c1ff1ca19175f67b11
       </footer>
 
 
