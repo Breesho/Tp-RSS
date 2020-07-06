@@ -14,42 +14,32 @@ require_once '../controllers/pages-controller.php';
 </head>
 
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100">
+      <li class="nav-item">
+          <a class="nav-link" href="../index.html">Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/pages.php?choice=1">sujet - 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/pages.php?choice=2">sujet - 2 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="pages/pages.php?choice=3">sujet - 3</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
     <div class="container-fluid m-auto">
-        <?php foreach ($RssContentsPolitiques as $article) { ?>
-            <div class="card mb-3" style="max-width: 60%">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="<?= $article->enclosure['url']?>" class="card-img" alt="" width="auto" height="auto">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $article->title ?></h5>
-                            <p><?= $article->pubDate ?></p>
-                            <a href="<?= $article->link ?>">Lien vers L'article</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-
         <?php foreach ($RssContentsPhotos as $article) { ?>
-            <div class="card mb-3" style="max-width: 60%">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="<?= $article->enclosure['url']?>" class="card-img" alt="" width="auto" height="auto">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $article->title ?></h5>
-                            <p><?= $article->pubDate ?></p>
-                            <a href="<?= $article->link ?>">Lien vers L'article</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-
-        <?php foreach ($RssContentsGames as $article) { ?>
             <div class="card mb-3" style="max-width: 60%">
                 <div class="row no-gutters">
                     <div class="col-md-4">

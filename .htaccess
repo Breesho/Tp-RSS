@@ -1,7 +1,7 @@
 <ifmodule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine on
-  RewriteRule index.php?page=$1 [L]
+  RewriteRule ^http://tp-rss/index.php$   http://tp-rss/acceuil.html [L]
 </ifmodule>
 
 ErrorDocument 404 /index.php
