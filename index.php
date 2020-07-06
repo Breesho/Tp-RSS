@@ -31,13 +31,13 @@ require_once "controllers/index-controller.php"
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav w-100">
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php?choice=0">Premier Sujet</a>
+          <a class="nav-link" href="pages/pages.php?choice=<?= $myChoices[0] ?>"><?= $Thematique[$myChoices[0]] ?></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/pages.php?choice=1">Second Sujet</a>
+          <a class="nav-link" href="pages/pages.php?choice=<?= $myChoices[1] ?>"><?= $Thematique[$myChoices[1]] ?></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="pages/pages.php?choice=2">Troisième sujet</a>
+          <a class="nav-link " href="pages/pages.php?choice=<?= $myChoices[2] ?>"><?= $Thematique[$myChoices[2]] ?></a>
         </li>
       </ul>
       <ul class="navbar-nav d-flex justify-content-end">
@@ -60,7 +60,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssChoices[0] as $ElementArticle) {
+        foreach ($RssChoices[$myChoices[0]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -73,7 +73,7 @@ require_once "controllers/index-controller.php"
                 </div>
               </div>
               <div class="d-flex justify-content-end">
-                <a class="nav-link btn-loop m-2"  data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+                <a class="nav-link btn-loop m-2"  data-toggle="modal" data-target="#Modal-flux1-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
               <div class="d-flex justify-content-end">
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
@@ -98,7 +98,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssChoices[1] as $ElementArticle) {
+        foreach ($RssChoices[$myChoices[1]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -111,7 +111,7 @@ require_once "controllers/index-controller.php"
                 </div>
               </div>
               <div class="d-flex justify-content-end">
-                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux2-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
               <div class="d-flex justify-content-end">
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
@@ -136,7 +136,7 @@ require_once "controllers/index-controller.php"
         $Modal = 1;
         $Article = 0;
         $MaxArticles = $NumberOfArticles;
-        foreach ($RssChoices[3] as $ElementArticle) {
+        foreach ($RssChoices[$myChoices[2]] as $ElementArticle) {
         ?>
           <div class="card mb-3 d-block">
             <div class="row no-gutters">
@@ -149,7 +149,7 @@ require_once "controllers/index-controller.php"
                 </div>
               </div>
               <div class="d-flex justify-content-end">
-                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#ModalPolitiques<?= $Modal++ ?>" href="#">Loupe</a>
+                <a class="nav-link btn-loop m-2" data-toggle="modal" data-target="#Modal-flux3-<?= $Modal++ ?>" href="#">Loupe</a>
               </div>
               <div class="d-flex justify-content-end">
                 <a class="nav-link btn-link-article m-2" href="<?= $ElementArticle->link ?>" target="_blank">lien vers article</a>
@@ -204,18 +204,18 @@ require_once "controllers/index-controller.php"
                 </div>
               </div>
               <div class="modal-body">
-                <div class="[ form-group ]">
+                <div class="[ form-group]">
                   <label for="checkCat"> Choix des sujets : </label>
                   <ul id="checkCat" class="ulDotRemove">
-                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="<?= $LienPolitique ?>">
+                    <li><input type="checkbox" id="PolitiquesCheck" name="subscribe" value="">
                       <label for="subscribeNews">actualites/politique-droits</label></li>
-                    <li><input type="checkbox" id="PhotosCheck" name="subscribe" value="<?= $LienPhoto ?>">
+                    <li><input type="checkbox" id="PhotosCheck" name="subscribe" value="">
                       <label for="subscribeNews">photo</label></li>
-                    <li><input type="checkbox" id="GamesCheck" name="subscribe" value="<?= $LienGame ?>">
+                    <li><input type="checkbox" id="GamesCheck" name="subscribe" value="">
                       <label for="subscribeNews">jeux-video</label></li>
-                    <li><input type="checkbox" id="TechnosCheck" name="subscribe" value="<?= $LienSmartphone ?>">
+                    <li><input type="checkbox" id="TechnosCheck" name="subscribe" value="">
                       <label for="subscribeNews">technos</label></li>
-                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe" value="<?= $LienTechno ?>">
+                    <li><input type="checkbox" id="SmartphonesCheck" name="subscribe" value="">
                       <label for="subscribeNews">smartphones</label></li>
                   </ul>
                 </div>
@@ -232,9 +232,9 @@ require_once "controllers/index-controller.php"
       <!-- ===============================================================/modal loop============================================================================ -->
       <?php
       $ModalId = 1;
-      foreach ($RssChoices[3] as $article) {
+      foreach ($RssChoices[$myChoices[0]] as $article) {
       ?>
-        <div class="modal" id="ModalPolitiques<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal" id="Modal-flux1-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -257,9 +257,9 @@ require_once "controllers/index-controller.php"
 
       <?php
       $ModalId = 1;
-      foreach ($RssChoices[1] as $article) {
+      foreach ($RssChoices[$myChoices[1]] as $article) {
       ?>
-        <div class="modal" id="ModalPhotos<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal" id="Modal-flux2-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -282,9 +282,9 @@ require_once "controllers/index-controller.php"
 
       <?php
       $ModalId = 1;
-      foreach ($RssChoices[2] as $article) {
+      foreach ($RssChoices[$myChoices[2]] as $article) {
       ?>
-        <div class="modal" id="ModalGames<?= $ModalId++ ?>" tabindex="-1" role="dialog">
+        <div class="modal" id="Modal-flux3-<?= $ModalId++ ?>" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
