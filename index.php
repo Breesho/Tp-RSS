@@ -167,7 +167,7 @@ require_once "controllers/index-controller.php"
       </div>
 
       <footer>
-          <p>lol</p>
+          
       </footer>
 
 

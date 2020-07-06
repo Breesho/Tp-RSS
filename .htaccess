@@ -4,7 +4,25 @@
   
 </ifmodule>
 
-ErrorDocument 404  tp-rss/pages/404.php
+Options +FollowSymlinks
+
+RewriteEngine on
+
+RewriteRule ^([0-4]+).html$  index.php?id=$1
+
+ErrorDocument 404 http://tp-rss/pages/404.php
+
+RewriteRule ^error.html$  index.php?404.php
+
+RewriteRule ^(accueil.html)$ index.php [L]
+RewriteRule ^(politique.html)$ /pages/pages.php?choice=0 [L]
+RewriteRule ^(photo.html)$ /pages/pages.php?choice=1 [L]
+RewriteRule ^(jeux.html)$ /pages/pages.php?choice=2 [L]
+RewriteRule ^(smartphone.html)$ /pages/pages.php?choice=3 [L]
+RewriteRule ^(tech.html)$ /pages/pages.php?choice=4 [L]
+
+
+
 
 
 
