@@ -42,3 +42,6 @@
 label {
     color: white;
 }
+.ulDotRemove {
+    list-style-type: none;
+}

@@ -24,16 +24,7 @@ require_once '../controllers/pages-controller.php';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav w-100">
             <li class="nav-item">
-                    <a class="nav-link" href="../index.php">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=" pages.php?choice=0">Premier Sujet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=" pages.php?choice=1">Second Sujet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href=" pages.php?choice=2">Troisième sujet</a>
+                    <a class="nav-link" href="/index.php">Accueil</a>
                 </li>
             </ul>
     </nav>

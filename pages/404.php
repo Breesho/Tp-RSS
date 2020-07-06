@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>erreur 404</title>
 </head>
+
 <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.php">Accueil</a>
+                </li>
+            </ul>
+    </nav>
     <div class="error">
         <div class="row justify-content-center">
-            <div class="col-sm-6 mt-3 mb-3">
-                <div class="h2 text-center text-uppercase">Deso !</div>
-                <div class="text-center"><img src="" alt="erreur404"></div>
-                <div class="h5 text-center">Veuillez revenir sur la page d'accueil afin de continuer votre navigation.</div>
-                <div class='text-center'><a class="h3 text-uppercase" href="index.php">We have to go back !</a></div>
+            <div class="col-sm-8 mt-3 mb-3">
+                <div class="text-center"><img src="../assets/img/Error404.jpg" width="100%" height="auto" alt="erreur404"></div>
             </div>
         </div>
     </div>
@@ -23,4 +34,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -47,13 +47,10 @@ $myChoice2 = 2;
 $myChoice3 = 3;
 
 
-// Corresponds au choix des trois type d'actualité transmise dans la barre de naviguation  //
 $myChoices = [
-
     $myChoice1,
     $myChoice2,
     $myChoice3
-    
 ];
 
 $css = "assets/css/styles.css";
