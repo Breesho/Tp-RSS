@@ -1,6 +1,5 @@
 <?php
-require_once "controllers/index-controller.php";
-// var_dump($_POST);
+  require_once "controllers/index-controller.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@ require_once "controllers/index-controller.php";
   <title>Flux - RSS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?= $css ?>">
+  <link rel="stylesheet" href="<?= isset($_COOKIE['ColorTheme']) ? $_COOKIE['ColorTheme'] : $css ?>">
 
 </head>
 
@@ -54,12 +53,12 @@ require_once "controllers/index-controller.php";
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1"><?= $Thematique[$myChoices[0]] ?></h4>
         </div>
         <?php
         $Modal = 1;
         $Article = 0;
-        $MaxArticles = $NumberOfArticles;
+        $MaxArticles = isset($_COOKIE['NumberOfArticles']) ? $_COOKIE['NumberOfArticles'] : $NumberOfArticles;
         foreach ($RssChoices[$myChoices[0]] as $ElementArticle) {
         ?>
         <div class="card mb-3 d-block">
@@ -94,12 +93,12 @@ require_once "controllers/index-controller.php";
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1"><?= $Thematique[$myChoices[1]] ?></h4>
         </div>
         <?php
         $Modal = 1;
         $Article = 0;
-        $MaxArticles = $NumberOfArticles;
+        $MaxArticles = isset($_COOKIE['NumberOfArticles']) ? $_COOKIE['NumberOfArticles'] : $NumberOfArticles;
         foreach ($RssChoices[$myChoices[1]] as $ElementArticle) {
         ?>
         <div class="card mb-3 d-block">
@@ -134,12 +133,12 @@ require_once "controllers/index-controller.php";
 
       <div class="col-12 col-lg-4">
         <div class="row d-block text-center  p-2 update-actu">
-          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1">Fils D'actualités</h4>
+          <h4 id="actuTitle" class="d-inline-block border-bottom pb-1"><?= $Thematique[$myChoices[2]] ?></h4>
         </div>
         <?php
         $Modal = 1;
         $Article = 0;
-        $MaxArticles = $NumberOfArticles;
+        $MaxArticles = isset($_COOKIE['NumberOfArticles']) ? $_COOKIE['NumberOfArticles'] : $NumberOfArticles;
         foreach ($RssChoices[$myChoices[2]] as $ElementArticle) {
         ?>
         <div class="card mb-3 d-block">

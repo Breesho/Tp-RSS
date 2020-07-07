@@ -36,9 +36,9 @@ $Thematique = [
 
     'Politiques',
     'Photos',
-    'Games',
+    'Jeux-Videos',
     'Smartphones',
-    'Technos'
+    'Technologies'
 
 ];
 
@@ -114,7 +114,7 @@ if (isset($_COOKIE['myChoices'])){
         }
         if (count($paramChoices) == 3) {
             setcookie('myChoices', $paramChoices[0] . '/' . $paramChoices[1] . '/' . $paramChoices[2]);
-            // header('Location: index.php');
-            // exit;
+            header('Location: index.php');
+            exit;
         }
     }

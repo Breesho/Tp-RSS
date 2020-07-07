@@ -1,3 +1,11 @@
+.card-body h5 {
+    font-size: 1.00rem;
+}
+.card-body{
+    padding: 0.25rem;
+}
+
+
 .btn-loop {
     background-color: #dd5a5a;
     color: white;
