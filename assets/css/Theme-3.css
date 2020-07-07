@@ -2,10 +2,12 @@
     background-color: #dd5a5a;
     color: white;
 }
-.btn-link-article{
+
+.btn-link-article {
     background-color: #dd5a5a;
     color: white;
 }
+
 #actuality {
     padding-top: 50px;
     background-color: whitesmoke;
@@ -13,16 +15,10 @@
 
 .jumbotron {
     margin-bottom: 0px;
-    background-color: #d84141;
-
-}
-
-.jumbotron h1.display-4 {
-    color: white;
 }
 
 .navbar {
-    background-color: #dd5a5a!important;
+    background-color: #dd5a5a !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -36,12 +32,15 @@
 .navbar-light .navbar-nav .nav-link:checked {
     color: white !important;
 }
+
 #Bg-color {
     background-color: #d84141;
 }
+
 label {
     color: white;
 }
+
 .ulDotRemove {
     list-style-type: none;
 }
@@ -52,4 +51,4 @@ label {
         color: white;
         width: 100%;
     }
- }
+}
