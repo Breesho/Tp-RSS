@@ -85,3 +85,15 @@ label {
         width: 100%;
     }
 }
+
+.bgblue {
+    background-color: #98aafc;
+}
+
+hr {
+    background-color: #b8e4fb;
+}
+
+h6 {
+    color: #b8e4fb;;
+}
