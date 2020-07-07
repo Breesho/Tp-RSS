@@ -1,3 +1,14 @@
+.container-fluid {
+    padding: 0px!important;
+}
+.footermargin{
+    margin: 0px!important;
+}
+
+
+
+
+
 .card-body h5 {
     font-size: 1.00rem;
 }

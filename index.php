@@ -170,11 +170,12 @@
         }
         ?>
       </div>
-
-      <footer>
+    </div>
+  </div>
+      <footer class="container-fluid">
         <div class= "bgblue">
             <div class="container-fluid">
-                <div class="row py-4 d-flex align-items-center">
+                <div class="row footermargin py-4 d-flex align-items-center">
                     <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                         <h6 class="mb-0 text-white text-center">Super Reader RSS</h6>
                     </div>
@@ -184,13 +185,13 @@
             </div>
         </div>
             <div class="container-fluid text-center text-md-left mt-5">
-                <div class="row mt-3">
+                <div class="row footermargin mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase font-weight-bold">TEAM</h6>
                         <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>Félix Le Chaton<br>
                             Yves-Marie Barbe Blanche<br>
-                            Sabrina The Teenage Witch<br>
+                            Black Jesus<br>
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
