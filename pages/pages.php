@@ -34,6 +34,7 @@ require_once '../controllers/pages-controller.php';
 
         <?php
         $Modal = 0;
+        
         foreach ($RssContents as $ElementArticle) {
         ?>
             <div class="card col-md-8 mb-4 mt-4 d-block">
